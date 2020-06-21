@@ -1,0 +1,38 @@
+$default-font: "Montserrat-Regular";
+$accent: linear-gradient(59deg, #1da2ca 0%, #30d6fc 100%);
+$accent2: #f55c60;
+$accent3: #a8e281;
+$text: #1b1b1b;
+
+// Customization Bootstrap vars from "app/node_modules/bootstrap/scss/_variables.scss"
+$grid-gutter-width: 30px;
+$grid-columns: 12;
+$grid-breakpoints: (
+   xs: 0,
+   sm: 576px,
+   md: 768px,
+   lg: 992px,
+   xl: 1200px,
+);
+$container-max-widths: (
+   sm: 768px,
+   md: 1170px,
+   lg: 1170px,
+   xl: 1170px,
+);
+
+$gutter: $grid-gutter-width;
+
+.ibg {
+   background-position: center;
+   background-size: cover;
+   background-repeat: no-repeat;
+   position: relative;
+   img {
+      display: none;
+   }
+}
+
+.container {
+   margin: 0px auto;
+}

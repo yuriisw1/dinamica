@@ -1,0 +1,548 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0, strink-to-fit=no">
+   <meta name="description" content="">
+   <meta name="keywords" content="">
+   <meta name="robots" content="index, follow, noodp">
+   <meta name="google" content="notranslate">
+   <meta name="googlebot" content="index, follow">
+   <meta name="format-detection" content="telephone=no">
+   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+   <title>Home</title>
+   <link rel="stylesheet" href="css/style.min.css">
+</head>
+
+<body>
+
+   <div class="wrapper">
+      <div class="content">
+         <main class="content-page">
+            <section class="main-screen">
+               <div id="pdf-popup" class="pdf-popup mfp-hide">
+                  <div class="pdf-popup__body">
+                     <div class="pdf-popup__body-bg ibg">
+                        <img src="img/modal-pdf-bg.png" alt="">
+                     </div>
+                     <div class="pdf-popup__title">
+                        PDF файл «Как учить 10 слов
+                        в день без зубрежки»
+                     </div>
+                     <ul class="pdf-popup__list">
+                        <li>Самые популярные ошибки</li>
+                        <li>Как убыстрить процесс запоминания
+                        </li>
+                        <li>Секреты и лайвхаки</li>
+                     </ul>
+                     <form action="Post" id="pdf-form" class="pdf-form">
+                        <fieldset class="pdf-form-body">
+                           <input type="text" class="pdf-form-input"
+                              placeholder="E-mail, на которую придет файл с уроком">
+                           <input type="submit" value=" Получить бонус" name="pdf-submit"
+                              class="button pdf-form-btn accent-btn accent-btn__blue">
+                        </fieldset>
+                        <div class="main-body__btn-agreement">
+                           Нажимая на кнопку «Пройти тест и получить бонус»,
+                           я даю согласие на обработку персональных данных
+                           и соглашаюсь с политикой конфиденциальности
+                        </div>
+                     </form>
+                  </div>
+               </div>
+               <div id="form-popup" class="pdf-popup form-popup mfp-hide">
+                  <div class="pdf-popup__body">
+                     <div class="pdf-popup__body-bg ibg">
+                        <img src="img/bg-main.png" alt="">
+                     </div>
+                     <div class="pdf-popup__title">
+                        Благодарим за прохождение опроса!
+                     </div>
+                     <div class="pdf-popup__subtitle">
+                        Теперь ваш ребенок сможет бесплатно обучаться в нашей онлайн-школе и вы увидите результаты через
+                        7 дней.
+                     </div>
+                     <form action="Post" id="pdf-form" class="pdf-form">
+                        <fieldset class="pdf-form-body">
+                           <input type="text" class="pdf-form-input" placeholder="Ваше имя">
+                           <input type="text" class="pdf-form-input" placeholder="Номер телефона">
+                           <input type="text" class="pdf-form-input"
+                              placeholder="E-mail, на которую придет файл с уроком">
+                           <input type="submit" value="Получить бонус" rel="reg_form" name="pdf-submit"
+                              class="pdf-form-btn accent-btn accent-btn__blue">
+                        </fieldset>
+                        <div class="main-body__btn-agreement">
+                           Нажимая на кнопку «Пройти тест и получить бонус»,
+                           я даю согласие на обработку персональных данных
+                           и соглашаюсь с политикой конфиденциальности
+                        </div>
+                     </form>
+                  </div>
+               </div>
+               <div id="thanks-popup reg_form" class="pdf-popup popup reg_form thanks-popup ">
+                  <div class="thanks-popup__body">
+                     <div class="thanks-popup__title">
+                        Спасибо, что оставили заявку,
+                        а пока посмотрите отзывы о школе
+                     </div>
+                     <div class="thanks-popup__subtitle">
+                        Наш специалист свяжется с вами в ближайшее время
+                     </div>
+                     <div class="thanks-popup__row">
+                        <div class="thanks-popup__item">
+                           <div class="thanks-popup__img">
+                              <img src="img/modal-2.png" alt="">
+                           </div>
+                           <span>Иван Иванов</span>
+                           <img src="img/icons/vk-modal.svg" alt="">
+                        </div>
+                        <div class="thanks-popup__item">
+                           <div class="thanks-popup__img">
+                              <img src="img/modal-2.png" alt="">
+                           </div>
+                           <span>Иван Иванов</span>
+                           <img src="img/icons/vk-modal.svg" alt="">
+                        </div>
+                        <div class="thanks-popup__item">
+                           <div class="thanks-popup__img">
+                              <img src="img/modal-2.png" alt="">
+                           </div>
+                           <span>Иван Иванов</span>
+                           <img src="img/icons/vk-modal.svg" alt="">
+                        </div>
+                     </div>
+                  </div>
+                  <a class="close" href="#">Close</a>
+                  <button class="close">Close</button>
+               </div>
+               <div class="main-screen__bg ibg">
+                  <img src="img/bg-main.png" alt="">
+               </div>
+               <div class="main-screen__flag">
+                  <img src="img/flag.png" alt="">
+               </div>
+               <div class="main-screen__header header">
+                  <div class="container">
+                     <div class="row">
+                        <div class="col">
+                           <div class="header__body">
+                              <div class="header__burger-page">
+                                 <div class="header__burger-page-location">
+                                    <a href="#">Екатеринбург</a>
+                                 </div>
+                                 <div class="header__burger-page-btn-group">
+                                    <div class="accent-btn accent-btn__gray"><a href="#" id="modal-btn">вам
+                                          перезвонить?</a></div>
+                                    <div class="header__burger-page-telephone">
+                                       <a href="tel:+1234567890">+7 831 273-20-87</a>
+                                    </div>
+                                 </div>
+                              </div>
+                              <div class="header__burger">
+                                 <span></span>
+                              </div>
+                              <div class="header__logo">
+                                 <img src="img/logo.png" alt="Логотип Динамика">
+                              </div>
+                              <div data-da="header__logo,2,1200" class="header__infotext">
+                                 Онлайн-школа английского<br>
+                                 языка для детей от <strong>7 лет</strong>
+                              </div>
+                              <div class="header__location">
+                                 <a href="#">Екатеринбург</a>
+                              </div>
+                              <div data-da="header__btn-group,1,1200" class="header__telephone">
+                                 <a href="tel:+1234567890">+7 831 273-20-87</a>
+                              </div>
+                              <div class="header__btn-group">
+                                 <div class="header__btn accent-btn accent-btn__gray"><a href="#" id="modal-btn">вам
+                                       перезвонить?</a></div>
+                                 <div class="header__btn-call">
+                                    <a href="tel: 12345678">
+                                       <img src="img/icons/tel.svg" alt="">
+                                    </a>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <div class="container">
+                  <div class="main-screen__content">
+                     <div class="main-screen__content-call">
+                        <img src="img/icons/telephone.png" alt="">
+                        <span>Уделите пару минут своего времени на онлайн-тестирование из 5 вопросов и
+                           <strong>получите
+                              неделю бесплатного обучения</strong> </span>
+                     </div>
+                     <div id="modal-pdf" class="main-screen__content-pdf">
+                        <div class="main-screen__content-pdf-body">
+                           <div class="main-screen__content-pdf-body-bg">
+                              <img src="img/icons/hexagon.svg" alt="">
+                           </div>
+                           <img src="img/icons/pdf.svg" alt="">
+                           <span>
+                              <strong>
+                                 PDF файл
+                                 «Как учить
+                                 10 слов в день
+                                 без зубрежки»
+                              </strong>
+                           </span>
+                        </div>
+                     </div>
+                     <div class="main-screen__content-body ">
+                        <div class="main-body  main-body__textblock">
+                           <div class="main-body__label">
+                              Ребенок не может выучить английский?
+                           </div>
+                           <h1 class="main-body__title">
+                              К концу лета ваш ребенок
+                              по-английски <strong> будет понимать
+                                 и составлять </strong> предложения
+                           </h1>
+                           <h2 class="main-body__subtitle">
+                              благодаря игровому онлайн-обучению
+                              <strong>в сертифицированной школе</strong> «Динамика»
+                           </h2>
+                        </div>
+                        <div class=" main-screen__content-btn">
+                           <div class="main-body__btn-block">
+                              <div class="main-body__btn accent-btn accent-btn__blue">
+                                 <a class="" href="#quiz">пройти тест и получить бонус</a>
+                              </div>
+                              <div class="main-body__btn-agreement">
+                                 Нажимая на кнопку «Пройти тест и получить бонус»,
+                                 я даю согласие на обработку персональных данных
+                                 и соглашаюсь с политикой конфиденциальности
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+
+               </div>
+            </section>
+            <div class="features">
+               <div class="container">
+                  <div class="row">
+                     <div
+                        class="col-md-4 d-flex flex-column justify-content-center align-items-center features__block text-center">
+                        <img src="img/whatdo/1.png" alt="">
+                        <span>
+                           Разбираем учебные темы
+                           <b>на понятных примерах</b>, которые интересны ребенку
+                        </span>
+                     </div>
+                     <div
+                        class="col-md-4 d-flex flex-column justify-content-center align-items-center features__block text-center">
+                        <img src="img/whatdo/2.png" alt="">
+                        <span>
+                           С нами на английском <b>заговорит любой ребенок</b>
+                           от 6 до 18 лет
+                        </span>
+                     </div>
+                     <div
+                        class="col-md-4 d-flex flex-column justify-content-center align-items-center features__block text-center">
+                        <img src="img/whatdo/3.png" alt="">
+                        <span>
+                           Не зубрим темы
+                           из учебника,
+                           <b>80% материала осваиваете</b>
+                           на разговорной практике
+                        </span></div>
+                  </div>
+               </div>
+            </div>
+            <section class="quiz">
+               <div class="container">
+                  <div class="quiz__title text-center">
+                     <h2>
+                        Ответьте на 5 простых вопросов теста
+                        <b>и получите в подарок неделю бесплатного обучения</b>
+                        <strong>в онлайн-школе, а также pdf-файл</strong>
+                        «Как учить 10 слов в день без зубрежки»
+                     </h2>
+                     <h4>
+                        тест основан на результатах 1500 учениках, прошедших через нашу онлайн-школу за прошедший год
+                     </h4>
+                  </div>
+                  <div class="quiz__block quizform">
+                     <div class="quizform__flag">
+                        <img src="img/flag-2.png" alt="">
+                     </div>
+                     <div class="quizform__bigben">
+                        <img src="img/big-ben.png" alt="">
+                     </div>
+                     <div class="row no-gutters">
+                        <div class="col-md-3  d-none d-md-block quizform__info-about ">
+                           <div class="quizform__person ">
+                              <img src="img/women.png" alt="">
+                              <h3 class="quizform__person-name">
+                                 Лэйсан Фаусовна
+                              </h3>
+                              <h3 class="quizform__person-position">
+                                 Руководитель школы Динамика
+                              </h3>
+                           </div>
+                           <p class="quizform__person-quote text-center">
+                              Здравствуйте! Я являюсь руководителем онлайн-школы
+                              и помогу вам на всём протяжении теста.
+                              <span>К кадому вопросу будут мои пояснения и комментарии</span>, рекомендую читать
+                              внимательно, ведь
+                              это поможет вам более точно заполнить анкету и получить наиболее квалифицированную помощь
+                              в изучении английского языка.
+                           </p>
+                           <div class="quizform__gift d-flex flex-column align-items-center">
+                              <img src="img/icons/gift.svg" class="quizform__gift-img" alt="">
+                              <h4>До выбора подарка осталось:</h4>
+                              <div class="quizform__gift-number">
+                                 <span id="quizform__gift-quantity">4 </span>вопроса</div>
+                           </div>
+                        </div>
+                        <div class="col-md-9 d-flex flex-column align-items-center">
+                           <div id="quiz" class="quizform__block ">
+                              <div class="row">
+                                 <div class="col">
+                                    <form action="POST" id="msform" class="msform">
+                                       <ul id="progressbar">
+                                          <li class="active"></li>
+                                          <li><span></span></li>
+                                          <li><span></span></li>
+                                          <li><span></span></li>
+                                          <li><span></span></li>
+                                       </ul>
+                                       <fieldset>
+                                          <div class="msform__block">
+                                             <h2 class="fs-title text-center text-lg-left">
+                                                C какой целью хотите научить ребенка английскому?
+                                             </h2>
+                                             <div class="msform__row">
+                                                <div class="msform__item">
+                                                   <img src="img/quiz/1.png" alt="">
+                                                   <label><input type="checkbox" value="1" name="ege"></label>
+                                                   <span>Для сдачи <br>
+                                                      ЭГЭ, ОГЭ
+                                                      на 100 баллов</span>
+                                                </div>
+                                                <div class="msform__item">
+                                                   <img src="img/quiz/2.png" alt="">
+                                                   <label><input type="checkbox" value="1"
+                                                         name="ege"><span></span></label>
+                                                   <span>Для поступления
+                                                      в престижный Университет</span>
+                                                </div>
+                                                <div class="msform__item">
+                                                   <img src="img/quiz/3.png" alt="">
+                                                   <label><input type="checkbox" value="1"
+                                                         name="ege"><span></span></label>
+                                                   <span>Для поездок за границу и свободного владения языком</span>
+                                                </div>
+                                                <div class="msform__item">
+                                                   <img src="img/quiz/4.png" alt="">
+                                                   <label><input type="checkbox" value="1"
+                                                         name="ege"><span></span></label>
+                                                   <span>Чтобы ребенок
+                                                      знал английский
+                                                      на 5 в школе</span>
+                                                </div>
+                                             </div>
+                                          </div>
+                                          <input style="color: #fff;" type="button" name="next"
+                                             class="accent-btn next accent-btn__blue" value="следующий вопрос">
+                                       </fieldset>
+                                       <fieldset>
+                                          <div class="msform__block">
+                                             <h2 class="fs-title">
+                                                Сколько лет вашему ребенку?
+                                             </h2>
+                                             <div class="msform__row">
+                                                <div class="slider">
+                                                   <output for="fader" id="volume">0</output>
+                                                   <input type="range" id="fader" min="7" max="18" value="0" step="1"
+                                                      oninput="outputUpdate(value)">
+                                                </div>
+                                             </div>
+                                          </div>
+                                          <input style="color: #fff;" type="button" name="previous"
+                                             class="accent-btn previous accent-btn__gray" value="назад">
+                                          <input style="color: #fff;" type="button" name="next"
+                                             class="accent-btn next accent-btn__blue" value="следующий вопрос">
+                                       </fieldset>
+                                       <fieldset>
+                                          <div class="msform__block">
+                                             <h2 class="fs-title">
+                                                C какой целью хотите научить ребенка английскому?
+                                             </h2>
+                                             <div class="msform__row">
+                                                <div class="msform__item">
+                                                   <img src="img/quiz/5.png" alt="">
+                                                   <label><input type="checkbox" value="1"
+                                                         name="ege"><span></span></label>
+                                                   <span>Для поступления
+                                                      в престижный Университет</span>
+                                                </div>
+                                                <div class="msform__item">
+                                                   <img src="img/quiz/6.png" alt="">
+                                                   <label><input type="checkbox" value="1"
+                                                         name="ege"><span></span></label>
+                                                   <span>Для поездок за границу и свободного владения языком</span>
+                                                </div>
+                                                <div class="msform__item">
+                                                   <img src="img/quiz/7.png" alt="">
+                                                   <label><input type="checkbox" value="1"
+                                                         name="ege"><span></span></label>
+                                                   <span>Чтобы ребенок
+                                                      знал английский
+                                                      на 5 в школе</span>
+                                                </div>
+                                             </div>
+                                          </div>
+                                          <input style="color: #fff;" type="button" name="previous"
+                                             class="accent-btn previous accent-btn__gray" value="назад">
+                                          <input style="color: #fff;" type="button" name="next"
+                                             class="accent-btn next accent-btn__blue" value="следующий вопрос">
+                                       </fieldset>
+                                       <fieldset>
+
+                                          <div class="msform__block">
+                                             <!-- <div class="msform__block-img">
+                                                <img src="img/calendar.png" alt="">
+                                             </div> -->
+                                             <h2 class="fs-title">
+                                                C какой целью хотите научить ребенка английскому?
+                                             </h2>
+                                             <div class="msform__row">
+                                                <div class="radiobuttons">
+                                                   <div class="radiobuttons__item">
+                                                      <input type="radio" value="1" name="nameradio">
+                                                      По будням в вечернее время
+                                                   </div>
+                                                   <div class="radiobuttons__item">
+                                                      <input type="radio" value="2" name="nameradio">
+                                                      Удобно каждый день
+                                                   </div>
+                                                   <div class="radiobuttons__item">
+                                                      <input type="radio" value="3" name="nameradio">
+                                                      На выходных
+                                                   </div>
+
+                                                </div>
+                                             </div>
+                                          </div>
+                                          <input style="color: #fff;" type="button" name="previous"
+                                             class="accent-btn previous accent-btn__gray" value="назад">
+                                          <input style="color: #fff;" type="button" name="next"
+                                             class="accent-btn next accent-btn__blue" value="следующий вопрос">
+                                       </fieldset>
+                                       <fieldset>
+                                          <div class="msform__block">
+                                             <h2 class="fs-title">
+                                                C какой целью хотите научить ребенка английскому?
+                                             </h2>
+                                             <div class="msform__row">
+                                                <div class="msform__item">
+                                                   <img src="img/quiz/8.png" alt="">
+                                                   <label><input type="checkbox" value="1"
+                                                         name="ege"><span></span></label>
+                                                   <span>Для поступления
+                                                      в престижный Университет</span>
+                                                </div>
+                                                <div class="msform__item">
+                                                   <img src="img/quiz/9.png" alt="">
+                                                   <label><input type="checkbox" value="1"
+                                                         name="ege"><span></span></label>
+                                                   <span>Для поездок за границу и свободного владения языком</span>
+                                                </div>
+                                                <div class="msform__item">
+                                                   <img src="img/quiz/10.png" alt="">
+                                                   <label><input type="checkbox" value="1"
+                                                         name="ege"><span></span></label>
+                                                   <span>Чтобы ребенок
+                                                      знал английский
+                                                      на 5 в школе</span>
+                                                </div>
+                                             </div>
+                                          </div>
+                                          <input style="color: #fff;" type="button" name="previous"
+                                             class="accent-btn previous accent-btn__gray" value="назад">
+                                          <a href="#pdf-popup" class="popup-with-form stretched-link">
+                                             <input style="color: #fff;" type="submit" name="next"
+                                                class="accent-btn submit accent-btn__blue" value="Финиш">
+                                          </a>
+                                       </fieldset>
+                                    </form>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </section>
+         </main>
+      </div>
+      <footer class="footer">
+         <div class="container">
+            <div class="row footer__body d-flex flex-md-row flex-column align-items-center ">
+               <div class="col-lg-5 col-sm-6  footer__logo ">
+                  <img src="img/logo.png" alt="Логотип Динамика">
+                  <div class="header__infotext">
+                     Онлайн-школа английского<br>
+                     языка для детей от <strong>7 лет</strong>
+                  </div>
+               </div>
+               <div class="col-lg-3 col-sm-6 footer__telephone d-flex flex-column align-items-center">
+                  <div class="header__telephone ">
+                     +7 831 273-20-87
+                  </div>
+                  <div class="footer__consult">
+                     <a href="#">Бесплатная консультация</a>
+                  </div>
+               </div>
+               <div class="col-lg-4 col-sm-6 footer__social d-sm-flex justify-content-lg-end align-items-center">
+                  <span>Соц. сети:</span>
+                  <ul class="footer__social-list">
+                     <li class="footer__social-li"><a href="#"><img src="img/icons/vk.svg" alt="Vkontacte"
+                              class="footer__social-img"></a></li>
+                     <li class="footer__social-li"><a href="#"><img src="img/icons/facebook.svg" alt="Facebook"
+                              class="footer__social-img"></a></li>
+                     <li class="footer__social-li"><a href="#"><img src="img/icons/insta.svg" alt="Instagram  "
+                              class="footer__social-img"></a></li>
+                  </ul>
+               </div>
+               <div class="col-lg-4 col-sm-6 footer__license mt-md-5 mt-3">
+                  Лицензия: серия 33Л01 № 0002296 <br>
+                  Регистрационный номер 1790 от 1 декабря 2015 г. <br>
+                  Срок действия: бессрочно. Гос. аккредитация: серия 90А01
+               </div>
+               <div class="col-lg-5 col-sm-6 footer__agreement mt-md-5  mt-3  d-flex flex-column align-items-center">
+                  <a href="#">Соглашение на обработку персональных данных</a>
+                  Все права защищены (с) 2020 Динамика
+               </div>
+               <div
+                  class="col-lg-3 col-sm-6 footer__dev d-sm-flex justify-content-center align-items-lg-end flex-column mt-md-5  mt-3 ">
+                  <div class="footer__studio d-flex">
+                     <span>Разработано студией:</span>
+                     <img src="img/icons/az-studio.png" alt="">
+                  </div>
+                  <div class="footer__studio-iam">
+                     Верстка - <a href="https://t.me/izwindowz">Юрий Бабин</a>
+                  </div>
+
+               </div>
+            </div>
+         </div>
+      </footer>
+   </div>
+
+
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+   <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js'></script>
+   <script src="js/libs.min.js"></script>
+   <script src="js/main.js"></script>
+</body>
+
+</html>
