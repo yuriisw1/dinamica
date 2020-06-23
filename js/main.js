@@ -503,3 +503,426 @@ $(".previous").click(function () {
 $(".submit").click(function () {
    return false;
 })
+
+
+
+
+
+
+var number = 0;
+var maxNumber = $(".test__item").length - 3;
+var $element = $(".test__item").find("input, select, textarea");
+// var btnPrev = $(".prev-test");
+var btnNext = $('.next-test');
+var testTextNum = maxNumber - 1;
+var testText = $('.num-quest');
+var $elementRadio = $(".test__item").not('.final, .no-focus').find("input[type='radio'], input[type='checkbox'] ");
+var isValid;
+var dataBlock;
+var activeSlede = [];
+
+
+for (var i = 0; i < maxNumber; i++) {
+   activeSlede[i] = false;
+}
+
+$element.on('change input', function (e) {
+   var value = $(this).val().trim();
+   isValid = value !== "";
+   btnActive(!isValid);
+   // $(".text-subbtn").hide();
+});
+$('.calc-slider').on('click', function (e) {
+   isValid = true;
+   btnActive(!isValid);
+});
+
+if ($(window).width() < 991) {
+   $('.calc-slider').on('mouseover mousedown', function (e) {
+      isValid = true;
+      btnActive(!isValid);
+   });
+}
+function btnActive(isValid) {
+   if (number === 0) {
+      // btnPrev.prop('disabled', 'false');
+      btnNext.prop('disabled', isValid);
+   } else {
+      // btnPrev.prop('disabled', false);
+      if (activeSlede[number] === true || isValid === false) {
+         btnNext.prop('disabled', false);
+      } else {
+         btnNext.prop('disabled', true);
+      }
+
+   }
+
+}
+
+
+
+if ($('#qw2-1').prop('checked')) {
+   $('#col3').attr({
+      'disabled': 'disabled',
+   }).val(0);
+} else {
+   $('#col3').removeAttr('disabled');
+}
+
+$('input[name="qw2"]').on('change input', function (e) {
+
+   if ($('#qw2-1').prop('checked')) {
+      $('#col3').attr({
+         'disabled': 'disabled',
+      });
+   } else {
+      $('#col3').removeAttr('disabled');
+   }
+
+});
+// sidebar
+var $barLevel = Math.floor(100 / (maxNumber));
+var $barWidth = $barLevel;
+
+function progress(num) {
+   var testBlock = ".test-block-" + num;
+   var testCircle = ".test-circle-" + (num + 1);
+   $(testBlock).addClass('test-block-active');
+   $(testCircle).addClass('test-circle-active');
+   $(".progress-bar__line").text($barWidth + '%');
+}
+progress(0);
+
+
+var otv = [];
+// btn
+
+function btnClick() {
+
+   btnNext.on('click', next);
+   // $elementRadio.on('input, change',next);
+   // $('.inp-next').on('input, change',next);
+}
+btnClick();
+function next() {
+   event.preventDefault();
+   activeSlede[number] = true;
+
+   ++number;
+
+
+   btnActive(!isValid);
+   if (activeSlede[number] === true) {
+      btnNext.prop('disabled', false);
+   } else {
+      btnNext.prop('disabled', true);
+   }
+
+   $barWidth += $barLevel;
+   if (number < maxNumber - 1) {
+      $(".right__text-cont-item").hide();
+      $(".right__text-cont-item").eq(number).fadeIn(1000);
+   } else if (number > maxNumber - 1) {
+      $barWidth = 100;
+   }
+
+   if (number === 4) {
+      $('.test__righ-t1').hide();
+      $('.test__righ-t2').fadeIn();
+
+      btnActive(false);
+
+      btnNext.prop('disabled', false);
+
+   }
+
+   if (number === maxNumber) {
+      setTimeout(function () {
+         $(".test__item").hide();
+         $(".test__item").eq(number).fadeIn(1000);
+         $(".test__btn-block").hide();
+      }, 300);
+      setTimeout(function () {
+         $(".test__item").hide();
+         $(".test__item").eq(number + 1).fadeIn(1000);
+
+         $(".test__cont").addClass('final');
+
+         $('.test__righ-t2').hide();
+         $('.test__righ-t3').fadeIn();
+         $('.present-img-item').attr({
+            "src": $('.gift-box-item img').attr('src'),
+         });
+
+
+         var val = [];
+         for (var i = 0; i < maxNumber; i++) {
+            $(".test__item").eq(i).find('input').each(function (index, el) {
+               if ($(this).prop('checked')) {
+                  val[i] = $(this).val();
+               }
+            });
+         }
+         if ($('#impmap').val() !== '') {
+            val[1] = $('#impmap').val();
+         } else {
+            val[1] = $('#qw3inp').val() + ' км';
+         }
+
+         $('.tff1').text('Объем: ' + $('#gasholder_calc_v_value').val() + ' л');
+         $('.tff2').text('Остаток: ' + $('#gasholder_calc_pc_value').val() + ' %');
+         $('.tff3').text(val[0] + ' ' + $('#col3').val());
+
+         $('.tf3').text('-' + val[1]);
+         $('.tf4').text('-' + val[2]);
+
+         $('.tf1').text('-' + val[3]);
+
+         // $('.tf5').text('-'+val[4]);
+         $('.tf6').text('-' + ' ' + val[4]);
+
+         $('.test__btn-block').hide();
+
+      }, 2700);
+   } else {
+      setTimeout(function () {
+         $(".test__item").hide();
+         $(".test__item").eq(number).fadeIn(1000);
+         $(".next-test").hide();
+         $(".next-test").eq(number).show();
+      }, 300);
+   }
+
+   if (testTextNum != 1) {
+      testTextNum -= 1;
+      if (testTextNum < 5 && testTextNum > 1) {
+         testText.text(testTextNum + ' вопросa');
+      } else if (testTextNum < 2) {
+         testText.text(testTextNum + ' вопрос');
+      } else {
+         testText.text(testTextNum + ' вопросов');
+      }
+   }
+   setTimeout(function () {
+      $(".test-item__number-furst").text(number + 1);
+      // $barWidth += $barLevel;
+      progress(number);
+
+      animateTop();
+   }, 300);
+   // }
+}
+
+
+var inpTrue = false;
+$('.qw6').find('input').on('change input', function () {
+
+   $('.gift-box-item img').attr({
+      "src": $(this).parents('.item-wq-6').find('.iw6i').attr('src'),
+   });
+   $('.text-prs').text($(this).parents('.item-wq-6').find('.text-small-test').text().trim());
+   $('.title-presents-6').text($(this).val());
+
+});
+
+
+
+function animateTop() {
+   var elem = $('.form-test');
+   var top = elem.offset().top - 15;
+   $('body,html').animate({ scrollTop: top }, 400);
+}
+
+
+
+var nForm = false;
+$(function () {
+   'use strict';
+   var nForm = false;
+   $('form').on('submit', function (e) {
+      e.preventDefault();
+      var $that = $(this);
+      var fd = new FormData(this);
+
+      //     var ref = $(this).find(".inp-final");
+
+      // 	if(ref.val() === '' || ref.val().length < 18){
+      // 		alert("Введите номер");
+      // 		 ref.focus();
+      // 		return false;
+      // 	}    
+      $that.find('.btn').attr({
+         'disabled': 'true'
+      });
+
+
+      var dopType2 = $('#col3').val();
+      fd.append('col3', dopType2);
+      $.ajax({
+         url: './send.php',
+         type: 'POST',
+         contentType: false,
+         processData: false,
+         data: fd,
+         success: function (msg) {
+            if ($that.find('#testsr').val() === "test") {
+               $(".form-test, .titletest").hide();
+               $(".end-block").fadeIn();
+               $that.find('input, button').attr({
+                  "disabled": 'true',
+               });
+               var id = $('#test'), top = $(id).offset().top - 30;
+               $('body,html').animate({ scrollTop: top }, 800);
+               closeMod = true;
+            } else if ($that.find('input[type="hidden"]').val() === "predl") {
+
+
+               $(".overlay").fadeOut();
+               $('html').addClass('stop');
+               $("#thanks").fadeIn();
+               $that.find('.btn').removeAttr('disabled');
+
+            } else {
+               $(".overlay").fadeOut();
+               $('html').addClass('stop');
+               $("#thanks").fadeIn();
+               $that.find('.btn').removeAttr('disabled');
+            }
+
+            $('form').trigger('reset');
+
+         },
+
+      });
+   });
+});
+
+function simulate(element, eventName) {
+   var options = extend(defaultOptions, arguments[2] || {});
+   var oEvent, eventType = null;
+
+   for (var name in eventMatchers) {
+      if (eventMatchers[name].test(eventName)) { eventType = name; break; }
+   }
+
+   if (!eventType)
+      throw new SyntaxError('Only HTMLEvents and MouseEvents interfaces are supported');
+
+   if (document.createEvent) {
+      oEvent = document.createEvent(eventType);
+      if (eventType == 'HTMLEvents') {
+         oEvent.initEvent(eventName, options.bubbles, options.cancelable);
+      }
+      else {
+         oEvent.initMouseEvent(eventName, options.bubbles, options.cancelable, document.defaultView,
+            options.button, options.pointerX, options.pointerY, options.pointerX, options.pointerY,
+            options.ctrlKey, options.altKey, options.shiftKey, options.metaKey, options.button, element);
+      }
+      element.dispatchEvent(oEvent);
+   }
+   else {
+      options.clientX = options.pointerX;
+      options.clientY = options.pointerY;
+      var evt = document.createEventObject();
+      oEvent = extend(evt, options);
+      element.fireEvent('on' + eventName, oEvent);
+   }
+   return element;
+}
+
+function extend(destination, source) {
+   for (var property in source)
+      destination[property] = source[property];
+   return destination;
+}
+
+var eventMatchers = {
+   'HTMLEvents': /^(?:load|unload|abort|error|select|change|submit|reset|focus|blur|resize|scroll)$/,
+   'MouseEvents': /^(?:click|dblclick|mouse(?:down|up|over|move|out))$/
+}
+var defaultOptions = {
+   pointerX: 0,
+   pointerY: 0,
+   button: 0,
+   ctrlKey: false,
+   altKey: false,
+   shiftKey: false,
+   metaKey: false,
+   bubbles: true,
+   cancelable: true
+}
+// -----------------------
+
+
+var idVideo;
+
+function playYouModal(e) {
+   e.preventDefault();
+   $(".modal-video-body").append('<iframe></iframe>');
+   var iframe = $(".modal-video-body").find('iframe');
+
+
+   $('html').addClass('stop');
+   $('#video-modal').fadeIn().scrollTop(1);
+   $('#video-modal').find('.overlay-wrap').height($('#video-modal').find('.modal-wrap').outerHeight(true));
+   if ($(this).data('play') != null) {
+      idVideo = $(this).data("play");
+   }
+   var iframe_url = "https://www.youtube.com/embed/" + idVideo + "?enablejsapi=1&autoplay=1&autohide=1&rel=0";
+
+   if ($(this).attr("data-params")) iframe_url += '&' + $(this).attr("data-params");
+
+   iframe.attr({
+      src: iframe_url,
+      frameborder: '0',
+      allowfullscreen: 'allowfullscreen'
+   })
+      .css({
+         width: '100%',
+         height: '100%'
+      });
+
+   $(".modal-video-body").children()[0].contentWindow.postMessage('{"event":"command","func":"playVideo","args":""}', '*');
+
+}
+
+
+
+// клики
+$('.video-play').on('click', playYouModal);
+
+$('.close').on('click', function (event) {
+   event.preventDefault();
+   if ($(this).hasClass('close-video')) {
+      $('.modal-video-body iframe').remove();
+   } if ($(this).hasClass('close-nav')) {
+      $(".nav").removeClass('active');
+   }
+   $(".overlay").fadeOut();
+   $("html").removeClass('stop');
+});
+$(".main__btn-wrap, .main__block-item-img").on("click", function (event) {
+   var id = $('.titletest'), top = $(id).offset().top - 30;
+   $('body,html').animate({ scrollTop: top }, 800);
+});
+
+$('.overlay').not('#modal-page, #test').mouseup(function (e) {
+   var container = $('.modal-wrap');
+   if (container.has(e.target).length === 0 && !container.is(e.target)) {
+      $('html').removeClass('stop');
+      $('.overlay').fadeOut();
+   }
+});
+
+var closeMod = false;
+$(document).mouseleave(function (event) {
+   event = event || window.event;
+   if (event.clientY < 0 || event.clientY < 3) {
+      if (!closeMod) {
+         $('#end').fadeIn();
+         $('html').addClass('stop');
+         closeMod = true;
+      }
+
+   }
+});
