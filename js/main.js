@@ -446,7 +446,7 @@ $(".next").click(function () {
          //1. scale current_fs down to 80%
          scale = 1 - (1 - now) * 0.2;
          //2. bring next_fs from the right(50%)
-         left = (now * 50) + "%";
+         left = (0 * 50) + "%";
          //3. increase opacity of next_fs to 1 as it moves in
          opacity = 1 - now;
          current_fs.css({

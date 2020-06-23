@@ -11,12 +11,33 @@
       &__btn-group {
          text-align: center;
       }
+      &__telephone {
+         display: none;
+         margin-left: 0;
+      }
+      &__logo {
+         margin-bottom: 14px;
+      }
+      &__infotext {
+         margin-top: 14px;
+      }
+      &__location {
+         font-size: 16px;
+         margin-bottom: 50px;
+         margin-left: 0;
+      }
+   }
+   .header__btn-group-tel {
+      display: block;
    }
    .footer {
       &__logo {
          flex-direction: column;
          align-items: flex-start;
          text-align: center;
+      }
+      .header__telephone {
+         display: block;
       }
    }
 }
@@ -34,23 +55,30 @@
    }
    .main-screen {
       &__content-pdf {
-         right: 10px;
-         transform: translate(30%, -40%);
+         bottom: 87px;
+         right: 120px;
       }
    }
    .quiz {
+      padding: 90px 0px;
       &__title {
          h2 {
             font-size: 25px;
             line-height: 35px;
+         }
+         h4 {
+            margin-top: 24px;
          }
       }
    }
    .msform {
       &__row {
          flex-wrap: wrap;
+         justify-content: flex-start;
+         align-items: flex-start;
       }
       &__item {
+         max-width: 200px;
          margin-top: 40px;
          padding: 0px 10px;
       }
@@ -58,11 +86,143 @@
          text-align: center;
       }
    }
+   .main-screen {
+      height: 781px;
+      overflow: hidden;
+      &__bg {
+         width: 122%;
+         height: 110%;
+      }
+   }
+   .main-screen__content-pdf-body {
+      &::before {
+         display: none;
+      }
+   }
+   .main-body__btn-block {
+      margin-top: 40px;
+   }
+   .footer {
+      &__social {
+         margin-top: 25px;
+         margin-bottom: 10px;
+         align-items: center;
+      }
+      &__telephone {
+         margin-top: 25px;
+      }
+   }
+   .quizform__person-quote {
+      margin-top: 0px;
+      padding: 25px 0px;
+   }
+   .quizform__person-quote-lg {
+      p {
+         font-size: 14px;
+         margin-top: 20px;
+      }
+   }
+   .quizform__person {
+      margin-top: 60px;
+   }
+   .quizform__gift {
+      margin-top: 0px;
+   }
+   #msform{
+      height: 950px;
+   }
 }
 /**/
 
 /* Small Devices, Tablets */
 @media only screen and (max-width: 768px) {
+   .main-body {
+      &__label {
+         font-size: 19px;
+         margin-top: 34px;
+      }
+      &__title {
+         font-size: 27px;
+         max-width: 400px;
+         line-height: 35px;
+      }
+      &__subtitle {
+         font-size: 19px;
+         margin-left: 0px;
+         max-width: 378px;
+      }
+      &__btn {
+         font-size: 13px;
+         padding: 30px 65px 30px 30px !important;
+      }
+      &__btn-block {
+         margin-left: 0;
+      }
+      &__btn-agreement {
+         max-width: 333px;
+      }
+   }
+   .quiz {
+      &__title {
+         h2 {
+            font-size: 22px;
+            line-height: 33px;
+         }
+      }
+   }
+   .pdf-popup {
+      &__body {
+         padding: 50px;
+      }
+   }
+
+   .footer {
+      &__logo {
+         align-items: start;
+         text-align: start;
+         margin-bottom: 15px;
+      }
+   }
+   .quizform {
+      margin-top: 40px;
+   }
+}
+/**/
+
+@media only screen and (max-width: 586px) {
+   .main-screen {
+      &__bg {
+         width: 140%;
+      }
+      &__content {
+         padding: 0px;
+         width: 100%;
+         &-btn {
+            text-align: center;
+         }
+      }
+      &__content-pdf {
+         display: none;
+      }
+   }
+   .features {
+   }
+   .pdf-form-input {
+      width: 90%;
+   }
+   .pdf-form-btn {
+      width: 90%;
+   }
+
+   .radiobuttons {
+      &__item {
+         width: 100%;
+      }
+   }
+   .previous {
+      margin-top: 30px;
+      margin-bottom: 20px;
+   }
    .header__burger-page.active {
       display: flex;
       justify-content: flex-end;
@@ -75,12 +235,12 @@
          left: 0px;
          display: block;
          top: -100%;
-         height: 50vh;
+         height: 300px;
          width: 100vw;
          position: fixed;
          background: #fff;
          transition: all 0.3s ease 0s;
-         z-index: 5;
+         z-index: 7;
          &.active {
             transition: all 0.3s ease 0s;
             top: 0;
@@ -171,9 +331,13 @@
    .header__burger {
       display: block;
       position: relative;
-      width: 30px;
-      height: 30px;
-      z-index: 6;
+      width: 26px;
+      height: 20px;
+      z-index: 8;
+      top: 14px;
+   }
+   .header__btn-call {
+      margin-top: 10px;
    }
    .header__burger span {
       position: absolute;
@@ -198,7 +362,7 @@
       top: 3;
    }
    .header__burger:after {
-      bottom: 5px;
+      bottom: -5px;
    }
 
    .header__burger.active span {
@@ -207,175 +371,65 @@
 
    .header__burger.active:before {
       transform: rotate(45deg);
-      top: 9px;
+      top: 17px;
       background: $accent;
    }
    .header__burger.active:after {
       transform: rotate(-45deg);
-      bottom: 17px;
+      bottom: 0px;
       background: $accent;
    }
-   .header__nav {
-      position: fixed;
-      left: 20px;
-      right: 0;
-      z-index: 2;
-      top: -100%;
-      height: 100%;
-      width: 100%;
-      background: #fff;
-      transition: all 0.3s ease 0s;
-      padding: 0px;
-      border-bottom: transparent;
+   .main-screen__content-btn {
+      text-align: start !important;
    }
-   .header__nav.active {
-      top: 0%;
-      transition: all 0.3s ease 0s;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      flex-direction: column;
+   .main-body__textblock {
+      margin-top: 40px;
    }
-   .main-body {
-      &__label {
-         font-size: 19px;
-      }
-      &__title {
-         font-size: 30px;
-      }
-      &__subtitle {
-         font-size: 19px;
-         margin-left: 0px;
-      }
-      &__btn {
-         font-size: 13px;
-      }
-      &__btn-block {
-         margin-left: 0;
-      }
-   }
-   .quiz {
-      &__title {
-         h2 {
-            font-size: 22px;
-            line-height: 33px;
-         }
-      }
-   }
-   .pdf-popup {
-      &__body{
-         padding: 50px;
-      }
-   }
-
    .footer {
-      text-align: center;
       &__logo {
-         align-items: center;
          text-align: center;
-         margin-bottom: 15px;
-      }
-      &__social {
-         margin-top: 25px;
-         margin-bottom: 10px;
-         span {
-            display: none;
-         }
-         flex-direction: column;
          align-items: center;
       }
-   }
-}
-/**/
-
-@media only screen and (max-width: 767px) {
-   .features {
-      padding-top: 150px;
-      &__block {
-         &:nth-child(2) {
-            margin-top: 30px;
-            margin-bottom: 50px;
-         }
-      }
-   }
-}
-
-@media only screen and (max-width: 586px) {
-   .main-screen {
-      background: url(../img/bg-main-sm.png) 0 0 / cover no-repeat;
-      &__bg {
-         display: none;
-      }
-      &__content {
-         padding: 0px;
-         width: 100%;
-         &-btn {
-            text-align: center;
-         }
-      }
-      &__content-pdf {
-         display: none;
-      }
-   }
-   .features {
-      padding-top: 100px;
-   }
-   .pdf-form-input{
-      width: 90%;
-   }
-   .pdf-form-btn {
-      width: 90%;
-   }
-   .main-body {
-      &__textblock {
-         padding-top: 70px;
-         margin-top: 78px;
-      }
-      &__label {
-         margin-top: 0px;
-         width: 100%;
+      &__license {
          text-align: center;
       }
-      &__title {
-         text-align: center;
-         font-size: 27px;
-         font-weight: 600;
-      }
-      &__subtitle {
+      &__telephone {
          text-align: center;
       }
-      &__btn-block {
-         margin: 50px 0px 0px 0px;
-         &::before {
-            display: none;
-         }
+   }
+   .quizform__person {
+      flex-direction: row;
+   }
+   .quizform__person-block {
+      position: relative;
+      left: -20px;
+      .quizform__person-position {
+         font-size: 11px;
       }
-      &__btn {
-         padding: 25px !important;
+      .quizform__person-name {
+         font-size: 12px;
       }
    }
-   .radiobuttons {
-      &__item {
-         width: 100%;
+   .msform__item {
+      padding: 10px 0px;
+      margin: 0px;
+      img {
       }
-   }
-   .previous {
-      margin-top: 30px;
-      margin-bottom: 20px;
    }
 }
 
 @media only screen and (max-width: 480px) {
    .main-screen {
-      padding-bottom: 80px;
+      height: 881px;
+      &__bg {
+         width: 270%;
+      }
    }
    .main-body {
-      padding-top: 170px;
       &__textblock {
-         margin-top: 48px;
+         margin-top: 70px;
       }
       &__label {
-         margin-top: 0px;
          width: 100%;
          text-align: center;
       }
@@ -388,6 +442,53 @@
          text-align: center;
       }
       &__btn-block {
+         text-align: center;
+         margin: 40px 0px 0px 0px;
+         &::before {
+            display: none;
+         }
+      }
+      &__btn {
+         padding: 25px !important;
+      }
+   }
+   .main-screen__content-btn {
+      text-align: center !important;
+      padding: 0px 10px;
+   }
+   .msform {
+      &__item {
+         font-size: 13px;
+         img {
+            width: 140px;
+            height: 160px;
+         }
+      }
+   }
+   .main-body {
+      &__textblock {
+      }
+      &__label {
+         margin-top: 0px;
+         width: 100%;
+         text-align: center;
+         border-radius: 0;
+      }
+      &__title {
+         padding: 0px 40px;
+         text-align: center;
+         font-size: 28px;
+         font-weight: 400;
+         max-width: 100%;
+      }
+      &__subtitle {
+         padding: 0px 40px;
+         text-align: center;
+         max-width: 100%;
+         font-size: 17px;
+         line-height: 24px;
+      }
+      &__btn-block {
          margin: 50px 0px 0px 0px;
          &::before {
             display: none;
@@ -397,11 +498,21 @@
          padding: 25px !important;
       }
    }
+   .container.main-screen__container {
+      padding-right: 0px;
+      padding-left: 0px;
+   }
+   .header__body {
+      align-items: flex-start;
+   }
+}
+
+@media only screen and (max-width: 410px) {
    .msform {
       &__item {
-         margin-top: 40px;
-         &:first-child {
-            margin-top: 0;
+         img {
+            width: 120px;
+            height: 130px;
          }
       }
    }
@@ -410,7 +521,6 @@
 /* Custom, iPhone Retina */
 @media only screen and (max-width: 370px) {
    .features {
-      padding-top: 330px;
    }
    .main-body {
       &__label {
@@ -418,9 +528,6 @@
          text-align: center;
          font-size: 17px;
       }
-   }
-   .main-body {
-      padding-top: 350px;
    }
    .header__burger-page {
       height: 60vh;
@@ -433,9 +540,6 @@
    }
 }
 @media only screen and (max-width: 340px) {
-   .main-body {
-      padding-top: 450px;
-   }
    .msform__block {
       margin-left: -30px;
    }

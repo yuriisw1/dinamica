@@ -123,7 +123,7 @@
                   <img src="img/flag.png" alt="">
                </div>
                <div class="main-screen__header header">
-                  <div class="container">
+                  <div class="container ">
                      <div class="row">
                         <div class="col">
                            <div class="header__body">
@@ -152,12 +152,15 @@
                               <div class="header__location">
                                  <a href="#">Екатеринбург</a>
                               </div>
-                              <div data-da="header__btn-group,1,1200" class="header__telephone">
+                              <div class="header__telephone">
                                  <a href="tel:+1234567890">+7 831 273-20-87</a>
                               </div>
                               <div class="header__btn-group">
                                  <div class="header__btn accent-btn accent-btn__gray"><a href="#" id="modal-btn">вам
                                        перезвонить?</a></div>
+                                 <div class="header__telephone header__btn-group-tel">
+                                    <a href="tel:+1234567890">+7 831 273-20-87</a>
+                                 </div>
                                  <div class="header__btn-call">
                                     <a href="tel: 12345678">
                                        <img src="img/icons/tel.svg" alt="">
@@ -169,7 +172,7 @@
                      </div>
                   </div>
                </div>
-               <div class="container">
+               <div class="container main-screen__container">
                   <div class="main-screen__content">
                      <div class="main-screen__content-call">
                         <img src="img/icons/telephone.png" alt="">
@@ -227,9 +230,9 @@
             </section>
             <div class="features">
                <div class="container">
-                  <div class="row">
+                  <div class="row no-gutters">
                      <div
-                        class="col-md-4 d-flex flex-column justify-content-center align-items-center features__block text-center">
+                        class="col-sm-4 d-flex flex-column justify-content-center align-items-center features__block text-center">
                         <img src="img/whatdo/1.png" alt="">
                         <span>
                            Разбираем учебные темы
@@ -237,7 +240,7 @@
                         </span>
                      </div>
                      <div
-                        class="col-md-4 d-flex flex-column justify-content-center align-items-center features__block text-center">
+                        class="col-sm-4 d-flex flex-column justify-content-center align-items-center features__block text-center">
                         <img src="img/whatdo/2.png" alt="">
                         <span>
                            С нами на английском <b>заговорит любой ребенок</b>
@@ -245,7 +248,7 @@
                         </span>
                      </div>
                      <div
-                        class="col-md-4 d-flex flex-column justify-content-center align-items-center features__block text-center">
+                        class="col-sm-4 d-flex flex-column justify-content-center align-items-center features__block text-center">
                         <img src="img/whatdo/3.png" alt="">
                         <span>
                            Не зубрим темы
@@ -260,13 +263,14 @@
                <div class="container">
                   <div class="quiz__title text-center">
                      <h2>
-                        Ответьте на 5 простых вопросов теста
-                        <b>и получите в подарок неделю бесплатного обучения</b>
-                        <strong>в онлайн-школе, а также pdf-файл</strong>
+                        Ответьте на 5 простых вопросов теста <br>
+                        <b>и получите в подарок неделю бесплатного обучения</b> <br>
+                        <strong>в онлайн-школе, а также pdf-файл</strong> <br>
                         «Как учить 10 слов в день без зубрежки»
                      </h2>
                      <h4>
-                        тест основан на результатах 1500 учениках, прошедших через нашу онлайн-школу за прошедший год
+                        тест основан на результатах 1500 учениках, <br> прошедших через нашу онлайн-школу за прошедший
+                        год
                      </h4>
                   </div>
                   <div class="quiz__block quizform">
@@ -277,24 +281,28 @@
                         <img src="img/big-ben.png" alt="">
                      </div>
                      <div class="row no-gutters">
-                        <div class="col-md-3  d-none d-md-block quizform__info-about ">
-                           <div class="quizform__person ">
+                        <div
+                           class="col-lg-3 order-2 order-lg-1 d-lg-block d-none quizform__info-about d-lg-flex  flex-column ">
+                           <div class="quizform__person">
                               <img src="img/women.png" alt="">
-                              <h3 class="quizform__person-name">
+                              <div class="quizform__person-name">
                                  Лэйсан Фаусовна
-                              </h3>
-                              <h3 class="quizform__person-position">
+                              </div>
+                              <div class="quizform__person-position">
                                  Руководитель школы Динамика
-                              </h3>
+                              </div>
                            </div>
-                           <p class="quizform__person-quote text-center">
-                              Здравствуйте! Я являюсь руководителем онлайн-школы
-                              и помогу вам на всём протяжении теста.
-                              <span>К кадому вопросу будут мои пояснения и комментарии</span>, рекомендую читать
-                              внимательно, ведь
-                              это поможет вам более точно заполнить анкету и получить наиболее квалифицированную помощь
-                              в изучении английского языка.
-                           </p>
+                           <div class="quizform__person-quote text-lg-center ">
+                              <p>
+                                 Здравствуйте! Я являюсь руководителем онлайн-школы
+                                 и помогу вам на всём протяжении теста.
+                                 <strong>К кадому вопросу будут мои пояснения и комментарии</strong>, рекомендую читать
+                                 внимательно, ведь
+                                 это поможет вам более точно заполнить анкету и получить наиболее квалифицированную
+                                 помощь
+                                 в изучении английского языка.
+                              </p>
+                           </div>
                            <div class="quizform__gift d-flex flex-column align-items-center">
                               <img src="img/icons/gift.svg" class="quizform__gift-img" alt="">
                               <h4>До выбора подарка осталось:</h4>
@@ -302,21 +310,62 @@
                                  <span id="quizform__gift-quantity">4 </span>вопроса</div>
                            </div>
                         </div>
-                        <div class="col-md-9 d-flex flex-column align-items-center">
+                        <div style="background-color: #f6f6f7;"
+                           class="col-lg-3 d-lg-none d-block order-2 order-lg-1 quizform__info-about-lg d-flex flex-sm-row flex-column ">
+                           <div class="row d-flex align-items-center">
+                              <div class="col-sm-5 order-sm-1 order-2">
+                                 <div class="quizform__person">
+                                    <img src="img/women.png" alt="">
+                                    <div data-da="quizform__person-block, 0, 586" class="quizform__person-name">
+                                       Лэйсан Фаусовна
+                                    </div>
+                                    <div data-da="quizform__person-block, 1, 586" class="quizform__person-position">
+                                       Руководитель школы Динамика
+                                    </div>
+                                    <div class="quizform__person-block">
+
+                                    </div>
+                                 </div>
+                              </div>
+                              <div class="col-sm-7 order-sm-2 order-1">
+                                 <div class="quizform__person-quote quizform__person-quote-lg  text-lg-center ">
+                                    <p>
+                                       Здравствуйте! Я являюсь руководителем онлайн-школы
+                                       и помогу вам на всём протяжении теста.
+                                       <span>К кадому вопросу будут мои пояснения и комментарии</span>, рекомендую
+                                       читать
+                                       внимательно, ведь
+                                       это поможет вам более точно заполнить анкету и получить наиболее
+                                       квалифицированную
+                                       помощь
+                                       в изучении английского языка.
+                                    </p>
+                                 </div>
+                                 <div data-da="quizform__person-quote-lg, 0, 992"
+                                    class="quizform__gift d-flex flex-column align-items-center">
+                                    <img src="img/icons/gift.svg" class="quizform__gift-img" alt="">
+                                    <h4>До выбора подарка осталось:</h4>
+                                    <div class="quizform__gift-number">
+                                       4 вопроса</div>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                        <div class="col-lg-9 order-1 order-lg-2 d-flex flex-column align-items-center">
                            <div id="quiz" class="quizform__block ">
                               <div class="row">
                                  <div class="col">
                                     <form action="POST" id="msform" class="msform">
                                        <ul id="progressbar">
-                                          <li class="active"></li>
-                                          <li><span></span></li>
-                                          <li><span></span></li>
-                                          <li><span></span></li>
-                                          <li><span></span></li>
+                                          <li></li>
+                                          <li></li>
+                                          <li></li>
+                                          <li></li>
+                                          <li></li>
                                        </ul>
                                        <fieldset>
                                           <div class="msform__block">
-                                             <h2 class="fs-title text-center text-lg-left">
+                                             <h2 class="fs-title ">
                                                 C какой целью хотите научить ребенка английскому?
                                              </h2>
                                              <div class="msform__row">
@@ -486,7 +535,7 @@
       </div>
       <footer class="footer">
          <div class="container">
-            <div class="row footer__body d-flex flex-md-row flex-column align-items-center ">
+            <div class="row footer__body d-flex flex-sm-row flex-column align-items-center ">
                <div class="col-lg-5 col-sm-6  footer__logo ">
                   <img src="img/logo.png" alt="Логотип Динамика">
                   <div class="header__infotext">
@@ -494,7 +543,7 @@
                      языка для детей от <strong>7 лет</strong>
                   </div>
                </div>
-               <div class="col-lg-3 col-sm-6 footer__telephone d-flex flex-column align-items-center">
+               <div class="col-lg-3 col-sm-6 order-3 order-lg-2 footer__telephone d-flex flex-column ">
                   <div class="header__telephone ">
                      +7 831 273-20-87
                   </div>
@@ -502,7 +551,8 @@
                      <a href="#">Бесплатная консультация</a>
                   </div>
                </div>
-               <div class="col-lg-4 col-sm-6 footer__social d-sm-flex justify-content-lg-end align-items-center">
+               <div
+                  class="col-lg-4 col-sm-6 order-4 order-lg-3 footer__social d-sm-flex justify-content-center justify-content-lg-end align-items-center">
                   <span>Соц. сети:</span>
                   <ul class="footer__social-list">
                      <li class="footer__social-li"><a href="#"><img src="img/icons/vk.svg" alt="Vkontacte"
@@ -513,17 +563,18 @@
                               class="footer__social-img"></a></li>
                   </ul>
                </div>
-               <div class="col-lg-4 col-sm-6 footer__license mt-md-5 mt-3">
+               <div class="col-lg-4 col-sm-6 order-2 order-lg-4 footer__license  mt-lg-5 mt-0 ">
                   Лицензия: серия 33Л01 № 0002296 <br>
                   Регистрационный номер 1790 от 1 декабря 2015 г. <br>
                   Срок действия: бессрочно. Гос. аккредитация: серия 90А01
                </div>
-               <div class="col-lg-5 col-sm-6 footer__agreement mt-md-5  mt-3  d-flex flex-column align-items-center">
+               <div
+                  class="col-lg-5 col-sm-6 order-5 order-lg-5 footer__agreement mt-md-5  mt-3  d-flex flex-column  align-items-lg-center align-items-sm-start align-items-center">
                   <a href="#">Соглашение на обработку персональных данных</a>
                   Все права защищены (с) 2020 Динамика
                </div>
                <div
-                  class="col-lg-3 col-sm-6 footer__dev d-sm-flex justify-content-center align-items-lg-end flex-column mt-md-5  mt-3 ">
+                  class="col-lg-3 col-sm-6 order-6  order-lg-6 footer__dev d-sm-flex justify-content-center align-items-lg-end flex-column mt-md-5  mt-3 ">
                   <div class="footer__studio d-flex">
                      <span>Разработано студией:</span>
                      <img src="img/icons/az-studio.png" alt="">
